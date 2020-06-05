@@ -13,8 +13,6 @@ const UsersRoute = () => {
     })}
   , []);
 
-  console.log(users)
-
   return (
     <div className="container" data-testid="users-route">
         <UsersList users={users} />
