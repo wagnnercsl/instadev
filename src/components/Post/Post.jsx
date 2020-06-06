@@ -6,7 +6,7 @@ import './Post.scss';
 const Post = ({ postInfo, userInfo }) => {
   return (
     <article className="post" data-testid="post">
-      
+        
     </article>
   );
 };

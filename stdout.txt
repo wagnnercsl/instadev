@@ -1,0 +1,22 @@
+
+> instadev@0.1.0 submit C:\Users\Wagnner\codenation\react-16
+> react-scripts test src/__tests__/submit.test.js --reporters=default --reporters=jest-junit "--watchAll=false"
+
+  console.log src/routes/FeedRoute/FeedRoute.jsx:19
+    []
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: Invalid DOM property `class`. Did you mean `className`?
+        in div (at UserForm.jsx:9)
+        in UserForm (at submit.test.js:157)
+        in Router (at submit.test.js:156)
+
+  console.log src/containers/UserProfile/UserProfile.jsx:8
+      
+
+  console.log src/routes/FeedRoute/FeedRoute.jsx:19
+    []
+
+  console.log src/containers/UserProfile/UserProfile.jsx:8
+    undefined undefined undefined
+

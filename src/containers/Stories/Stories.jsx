@@ -10,17 +10,24 @@ const Stories = ({ stories, getUserHandler }) => {
     <React.Fragment>
       <section className="stories" data-testid="stories">
         <div className="container">
-          {stories.map(story => {
+          {stories.map((story, index) => {
               const user = getUserHandler(story.userId);
-              console.log(user);
-            return <Story key={story.id} user={user} />
+            
+              return (
+                <button key={index} className={`user__thumb ${index === 0 && 'user__thumb--hasNew'}`}>
+                    <div className="user__thumb__wrapper">
+                      <img src={user.avatar} alt={user.name}/>
+                    </div>
+                </button>
+              )
           })}
         </div>
       </section>
 
-      {true && (
-        <Story />
-        )}
+      {//true && (
+        //<Story />
+        //)
+      }
     </React.Fragment>
   );
 };

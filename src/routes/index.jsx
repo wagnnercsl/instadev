@@ -20,7 +20,7 @@ const Routes = () => (
 
     </Route>
 
-    <Route path="/newuser">
+    <Route path="/newuser" component={NewUserRoute}>
 
     </Route>
   </Switch>

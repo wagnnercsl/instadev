@@ -12,20 +12,23 @@ const ProfileRoute = () => {
   const [user, setUser] = useState([]);
   const [posts, setPosts] = useState([]);
   const { username } = useParams();
-
-  console.log(posts);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     Promise.all([getUserProfile(username), getUserPosts(username)]).then(response => {
       setUser(response[0]);
       setPosts(response[1]);
+      setLoading(false);
     })}
   , [username]);
   
   return (
     <div data-testid="profile-route">
       <UserProfile avatar={user.avatar} name={user.name} username={user.username}/>
-      <UserPosts posts={posts} />
+      {isLoading 
+      ? (<Loading/>)
+      : <UserPosts posts={posts} />
+      }
     </div>
   );
 };
